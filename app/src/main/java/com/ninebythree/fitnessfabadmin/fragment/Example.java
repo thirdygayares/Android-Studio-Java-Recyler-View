@@ -29,12 +29,11 @@ public class Example extends AppCompatActivity implements MyInterface {
         //initiate UI
         recyclerView = findViewById(R.id.recyclerView);
 
-
         //create Data
-        scheduledModels.add(new ScheduledModel("Alden Richard", "May 21 2023"));
-        scheduledModels.add(new ScheduledModel("Maine Mendoze", "May 21 2023"));
-        scheduledModels.add(new ScheduledModel("Dingdong Dantes", "May 21 2023"));
-        scheduledModels.add(new ScheduledModel("Coco Martin", "May 21 2023"));
+        scheduledModels.add(new ScheduledModel("Alden Richard", "May 21 2023", R.drawable.one));
+        scheduledModels.add(new ScheduledModel("Maine Mendoze", "May 21 2023",  R.drawable.two));
+        scheduledModels.add(new ScheduledModel("Dingdong Dantes", "May 21 2023", R.drawable.three));
+        scheduledModels.add(new ScheduledModel("Coco Martin", "May 21 2023", R.drawable.two));
 
         scheduledAdapter = new ScheduledAdapter(Example.this, scheduledModels, this);
 

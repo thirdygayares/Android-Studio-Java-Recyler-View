@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -53,7 +54,7 @@ public class ScheduledAdapter extends RecyclerView.Adapter<ScheduledAdapter.View
 
         holder.txtName.setText(scheduledModels.get(position).getName());
         holder.txtDate.setText(scheduledModels.get(position).getDate());
-
+        holder.imgContainer.setImageResource(scheduledModels.get(position).getImage());
     }
 
     @Override
@@ -67,6 +68,7 @@ public class ScheduledAdapter extends RecyclerView.Adapter<ScheduledAdapter.View
         //Dito mo tatawagin yung mga ginawa nating ID sa XML
         TextView txtName, txtDate;
         MaterialButton btnAccept, btnDecline;
+        ImageView imgContainer;
 
         public ViewHolder(@NonNull View itemView, MyInterface myInterfaces) {
             super(itemView);
@@ -75,6 +77,7 @@ public class ScheduledAdapter extends RecyclerView.Adapter<ScheduledAdapter.View
             txtDate = itemView.findViewById(R.id.txtDate);
             btnAccept = itemView.findViewById(R.id.btnAccept);
             btnDecline = itemView.findViewById(R.id.btnDeclined);
+            imgContainer = itemView.findViewById(R.id.imgContainer);
 
             itemView.setOnClickListener(view -> {
               if(myInterfaces != null) {
